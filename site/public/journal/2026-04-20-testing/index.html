@@ -1,273 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="light">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Тестирование нововведений | АИС определения объёма груза</title>
-<meta name="keywords" content="">
-<meta name="description" content="Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.">
-<meta name="author" content="Команда проекта">
-<link rel="canonical" href="https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/">
-<link crossorigin="anonymous" href="/project-practice/assets/css/stylesheet.a7c67debc3fcc92ca05a8ed850cadba74f131c9d85e460a97c15eff684a8bb9a.css" integrity="sha256-p8Z968P8ySygWo7YUMrbp08THJ2F5GCpfBXv9oSou5o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://grehovadar51-star.github.io/project-practice/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://grehovadar51-star.github.io/project-practice/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://grehovadar51-star.github.io/project-practice/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://grehovadar51-star.github.io/project-practice/apple-touch-icon.png">
-<link rel="mask-icon" href="https://grehovadar51-star.github.io/project-practice/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/">
-<noscript>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование нововведений | АИС определения объёма груза</title>
     <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #1a5276; color: white; padding: 1rem 2rem; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        nav { margin-top: 0.5rem; }
+        nav a { color: white; margin-right: 1rem; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        img { max-width: 100%; border-radius: 8px; }
+        footer { text-align: center; padding: 1rem; color: #666; }
+        .journal-entry { margin-bottom: 1.5rem; }
+        .journal-date { color: #e67e22; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { padding: 0.5rem; border: 1px solid #ddd; }
+        th { background: #1a5276; color: white; }
     </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    }
-
-</script><meta property="og:url" content="https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/">
-  <meta property="og:site_name" content="АИС определения объёма груза">
-  <meta property="og:title" content="Тестирование нововведений">
-  <meta property="og:description" content="Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="journal">
-    <meta property="article:published_time" content="2026-04-20T00:00:00+03:00">
-    <meta property="article:modified_time" content="2026-04-20T00:00:00+03:00">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Тестирование нововведений">
-  <meta name="twitter:description" content="Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Тестирование нововведений",
-      "item": "https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Тестирование нововведений",
-  "name": "Тестирование нововведений",
-  "description": "Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.\n",
-  "wordCount" : "34",
-  "inLanguage": "en",
-  "datePublished": "2026-04-20T00:00:00+03:00",
-  "dateModified": "2026-04-20T00:00:00+03:00",
-  "author":{
-    "@type": "Person",
-    "name": "Команда проекта"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "АИС определения объёма груза",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://grehovadar51-star.github.io/project-practice/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="https://grehovadar51-star.github.io/project-practice/" accesskey="h" title="АИС определения объёма груза (Alt + H)">АИС определения объёма груза</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/" title="Главная">
-                    <span>Главная</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/about/" title="О проекте">
-                    <span>О проекте</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/team/" title="Участники">
-                    <span>Участники</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/" title="Journal">
-                    <span>Журнал</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/resources/" title="Ресурсы">
-                    <span>Ресурсы</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/project-practice/">Home</a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-            <a href="">Journal</a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-</nav>
-    <h1 class="post-title entry-hint-parent">
-      Тестирование нововведений
-    </h1>
-    <div class="post-meta">
-
-<span title='2026-04-20 00:00:00 +0300 MSK'>April 20, 2026</span>&nbsp;·&nbsp;<span>Команда проекта</span>
+<body>
+    <header>
+        <h1>📦 АИС определения объёма груза</h1>
+        <nav>
+            <a href="/project-practice/">Главная</a>
+            <a href="/project-practice/about/">О проекте</a>
+            <a href="/project-practice/team/">Участники</a>
+            <a href="/project-practice/journal/">Журнал</a>
+            <a href="/project-practice/resources/">Ресурсы</a>
+        </nav>
+    </header>
+    <main>
+        
+<div class="card">
+    <h2>Тестирование нововведений</h2>
+    <p>Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.</p>
 
 </div>
-  </header> 
-  <div class="post-content md-content"><p>Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.</p>
 
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://grehovadar51-star.github.io/project-practice/">АИС определения объёма груза</a></span> · 
-
-    
-    
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+    <footer>
+        <p>© 2026 АИС определения объёма груза</p>
+    </footer>
 </body>
-
 </html>

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="card">
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    {{ range .Pages }}
+    <div class="journal-entry">
+        <p class="journal-date">{{ .Date.Format "02.01.2006" }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

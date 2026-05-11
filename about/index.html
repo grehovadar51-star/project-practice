@@ -1,244 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="light">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>О проекте | АИС определения объёма груза</title>
-<meta name="keywords" content="">
-<meta name="description" content="🎯 Цель проекта
-Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.
-❗ Проблематика
-Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:
-
-Низкая точность — погрешности и человеческий фактор
-Нерациональное использование транспорта — недогруз или перегруз
-Отсутствие объективного контроля — невозможность аудита
-
-✅ Задачи проекта
-
-Разработать систему на основе YOLO-модели
-Провести обучение нейронной сети на данных заказчика
-Реализовать API для интеграции
-Провести финальное тестирование
-Внедрить проект у заказчика
-
-🛠️ Стек технологий
-
-  
-      
-          Технология
-          Назначение
-      
-  
-  
-      
-          PyTorch
-          Фреймворк глубокого обучения
-      
-      
-          Ultralytics YOLO
-          Фреймворк компьютерного зрения
-      
-      
-          YOLOv8
-          Модель детекции объектов
-      
-      
-          OpenCV
-          Обработка изображений и видео
-      
-      
-          Roboflow
-          Разметка изображений, управление датасетами
-      
-  
-
-📈 Промежуточные результаты
-
-✅ Разработан алгоритм расчёта объёма груза
-✅ Программа протестирована и улучшена
-✅ Добавлен API для удобной передачи данных
-
-🤝 Взаимодействие с заказчиком
-Заказчик предоставляет:">
-<meta name="author" content="Команда проекта">
-<link rel="canonical" href="https://grehovadar51-star.github.io/project-practice/about/">
-<link crossorigin="anonymous" href="/project-practice/assets/css/stylesheet.a7c67debc3fcc92ca05a8ed850cadba74f131c9d85e460a97c15eff684a8bb9a.css" integrity="sha256-p8Z968P8ySygWo7YUMrbp08THJ2F5GCpfBXv9oSou5o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://grehovadar51-star.github.io/project-practice/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://grehovadar51-star.github.io/project-practice/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://grehovadar51-star.github.io/project-practice/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://grehovadar51-star.github.io/project-practice/apple-touch-icon.png">
-<link rel="mask-icon" href="https://grehovadar51-star.github.io/project-practice/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://grehovadar51-star.github.io/project-practice/about/">
-<noscript>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте | АИС определения объёма груза</title>
     <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #1a5276; color: white; padding: 1rem 2rem; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        nav { margin-top: 0.5rem; }
+        nav a { color: white; margin-right: 1rem; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        img { max-width: 100%; border-radius: 8px; }
+        footer { text-align: center; padding: 1rem; color: #666; }
+        .journal-entry { margin-bottom: 1.5rem; }
+        .journal-date { color: #e67e22; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { padding: 0.5rem; border: 1px solid #ddd; }
+        th { background: #1a5276; color: white; }
     </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    }
-
-</script><meta property="og:url" content="https://grehovadar51-star.github.io/project-practice/about/">
-  <meta property="og:site_name" content="АИС определения объёма груза">
-  <meta property="og:title" content="О проекте">
-  <meta property="og:description" content="🎯 Цель проекта Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.
-❗ Проблематика Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:
-Низкая точность — погрешности и человеческий фактор Нерациональное использование транспорта — недогруз или перегруз Отсутствие объективного контроля — невозможность аудита ✅ Задачи проекта Разработать систему на основе YOLO-модели Провести обучение нейронной сети на данных заказчика Реализовать API для интеграции Провести финальное тестирование Внедрить проект у заказчика 🛠️ Стек технологий Технология Назначение PyTorch Фреймворк глубокого обучения Ultralytics YOLO Фреймворк компьютерного зрения YOLOv8 Модель детекции объектов OpenCV Обработка изображений и видео Roboflow Разметка изображений, управление датасетами 📈 Промежуточные результаты ✅ Разработан алгоритм расчёта объёма груза ✅ Программа протестирована и улучшена ✅ Добавлен API для удобной передачи данных 🤝 Взаимодействие с заказчиком Заказчик предоставляет:">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="О проекте">
-  <meta name="twitter:description" content="🎯 Цель проекта Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.
-❗ Проблематика Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:
-Низкая точность — погрешности и человеческий фактор Нерациональное использование транспорта — недогруз или перегруз Отсутствие объективного контроля — невозможность аудита ✅ Задачи проекта Разработать систему на основе YOLO-модели Провести обучение нейронной сети на данных заказчика Реализовать API для интеграции Провести финальное тестирование Внедрить проект у заказчика 🛠️ Стек технологий Технология Назначение PyTorch Фреймворк глубокого обучения Ultralytics YOLO Фреймворк компьютерного зрения YOLOv8 Модель детекции объектов OpenCV Обработка изображений и видео Roboflow Разметка изображений, управление датасетами 📈 Промежуточные результаты ✅ Разработан алгоритм расчёта объёма груза ✅ Программа протестирована и улучшена ✅ Добавлен API для удобной передачи данных 🤝 Взаимодействие с заказчиком Заказчик предоставляет:">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "О проекте",
-      "item": "https://grehovadar51-star.github.io/project-practice/about/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "О проекте",
-  "name": "О проекте",
-  "description": "🎯 Цель проекта Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.\n❗ Проблематика Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:\nНизкая точность — погрешности и человеческий фактор Нерациональное использование транспорта — недогруз или перегруз Отсутствие объективного контроля — невозможность аудита ✅ Задачи проекта Разработать систему на основе YOLO-модели Провести обучение нейронной сети на данных заказчика Реализовать API для интеграции Провести финальное тестирование Внедрить проект у заказчика 🛠️ Стек технологий Технология Назначение PyTorch Фреймворк глубокого обучения Ultralytics YOLO Фреймворк компьютерного зрения YOLOv8 Модель детекции объектов OpenCV Обработка изображений и видео Roboflow Разметка изображений, управление датасетами 📈 Промежуточные результаты ✅ Разработан алгоритм расчёта объёма груза ✅ Программа протестирована и улучшена ✅ Добавлен API для удобной передачи данных 🤝 Взаимодействие с заказчиком Заказчик предоставляет:\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "🎯 Цель проекта Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.\n❗ Проблематика Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:\nНизкая точность — погрешности и человеческий фактор Нерациональное использование транспорта — недогруз или перегруз Отсутствие объективного контроля — невозможность аудита ✅ Задачи проекта Разработать систему на основе YOLO-модели Провести обучение нейронной сети на данных заказчика Реализовать API для интеграции Провести финальное тестирование Внедрить проект у заказчика 🛠️ Стек технологий Технология Назначение PyTorch Фреймворк глубокого обучения Ultralytics YOLO Фреймворк компьютерного зрения YOLOv8 Модель детекции объектов OpenCV Обработка изображений и видео Roboflow Разметка изображений, управление датасетами 📈 Промежуточные результаты ✅ Разработан алгоритм расчёта объёма груза ✅ Программа протестирована и улучшена ✅ Добавлен API для удобной передачи данных 🤝 Взаимодействие с заказчиком Заказчик предоставляет:\nДанные для обучения нейронной сети Вычислительные ресурсы 📅 План-график работ ",
-  "wordCount" : "140",
-  "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "Команда проекта"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://grehovadar51-star.github.io/project-practice/about/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "АИС определения объёма груза",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://grehovadar51-star.github.io/project-practice/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
-<body id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="https://grehovadar51-star.github.io/project-practice/" accesskey="h" title="АИС определения объёма груза (Alt + H)">АИС определения объёма груза</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/" title="Главная">
-                    <span>Главная</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/about/" title="О проекте">
-                    <span class="active">О проекте</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/team/" title="Участники">
-                    <span>Участники</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/" title="Journal">
-                    <span>Журнал</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://grehovadar51-star.github.io/project-practice/resources/" title="Ресурсы">
-                    <span>Ресурсы</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/project-practice/">Home</a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-</nav>
-    <h1 class="post-title entry-hint-parent">
-      О проекте
-    </h1>
-    <div class="post-meta">
-
-<span>Команда проекта</span>
-
-</div>
-  </header> 
-  <div class="post-content md-content"><h2 id="-цель-проекта">🎯 Цель проекта<a hidden class="anchor" aria-hidden="true" href="#-цель-проекта">#</a></h2>
+<body>
+    <header>
+        <h1>📦 АИС определения объёма груза</h1>
+        <nav>
+            <a href="/project-practice/">Главная</a>
+            <a href="/project-practice/about/">О проекте</a>
+            <a href="/project-practice/team/">Участники</a>
+            <a href="/project-practice/journal/">Журнал</a>
+            <a href="/project-practice/resources/">Ресурсы</a>
+        </nav>
+    </header>
+    <main>
+        
+<div class="card">
+    <h2>О проекте</h2>
+    <h2 id="-цель-проекта">🎯 Цель проекта</h2>
 <p>Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.</p>
-<h2 id="-проблематика">❗ Проблематика<a hidden class="anchor" aria-hidden="true" href="#-проблематика">#</a></h2>
+<h2 id="-проблематика">❗ Проблематика</h2>
 <p>Существующий процесс оценки объёма груза опирается на визуальную оценку сотрудниками:</p>
 <ul>
 <li><strong>Низкая точность</strong> — погрешности и человеческий фактор</li>
 <li><strong>Нерациональное использование транспорта</strong> — недогруз или перегруз</li>
 <li><strong>Отсутствие объективного контроля</strong> — невозможность аудита</li>
 </ul>
-<h2 id="-задачи-проекта">✅ Задачи проекта<a hidden class="anchor" aria-hidden="true" href="#-задачи-проекта">#</a></h2>
+<h2 id="-задачи-проекта">✅ Задачи проекта</h2>
 <ol>
 <li>Разработать систему на основе YOLO-модели</li>
 <li>Провести обучение нейронной сети на данных заказчика</li>
@@ -246,7 +54,7 @@
 <li>Провести финальное тестирование</li>
 <li>Внедрить проект у заказчика</li>
 </ol>
-<h2 id="-стек-технологий">🛠️ Стек технологий<a hidden class="anchor" aria-hidden="true" href="#-стек-технологий">#</a></h2>
+<h2 id="-стек-технологий">🛠️ Стек технологий</h2>
 <table>
   <thead>
       <tr>
@@ -277,109 +85,26 @@
       </tr>
   </tbody>
 </table>
-<h2 id="-промежуточные-результаты">📈 Промежуточные результаты<a hidden class="anchor" aria-hidden="true" href="#-промежуточные-результаты">#</a></h2>
+<h2 id="-промежуточные-результаты">📈 Промежуточные результаты</h2>
 <ul>
 <li>✅ Разработан алгоритм расчёта объёма груза</li>
 <li>✅ Программа протестирована и улучшена</li>
 <li>✅ Добавлен API для удобной передачи данных</li>
 </ul>
-<h2 id="-взаимодействие-с-заказчиком">🤝 Взаимодействие с заказчиком<a hidden class="anchor" aria-hidden="true" href="#-взаимодействие-с-заказчиком">#</a></h2>
+<h2 id="-взаимодействие-с-заказчиком">🤝 Взаимодействие с заказчиком</h2>
 <p>Заказчик предоставляет:</p>
 <ul>
 <li>Данные для обучения нейронной сети</li>
 <li>Вычислительные ресурсы</li>
 </ul>
-<h2 id="-план-график-работ">📅 План-график работ<a hidden class="anchor" aria-hidden="true" href="#-план-график-работ">#</a></h2>
+<h2 id="-план-график-работ">📅 План-график работ</h2>
 <p><img alt="Диаграмма Ганта" loading="lazy" src="/images/schema.png"></p>
 
+</div>
 
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://grehovadar51-star.github.io/project-practice/">АИС определения объёма груза</a></span> · 
-
-    
-    
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+    <footer>
+        <p>© 2026 АИС определения объёма груза</p>
+    </footer>
 </body>
-
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестирование нововведений | АИС определения объёма груза</title>
+    <title>{{ .Title }} | АИС определения объёма груза</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
         header { background: #1a5276; color: white; padding: 1rem 2rem; }
@@ -34,13 +34,7 @@
         </nav>
     </header>
     <main>
-        
-<div class="card">
-    <h2>Тестирование нововведений</h2>
-    <p>Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.</p>
-
-</div>
-
+        {{ block "main" . }}{{ end }}
     </main>
     <footer>
         <p>© 2026 АИС определения объёма груза</p>
