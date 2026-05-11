@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://grehovadar51-star.github.io/project-practice/'
 language = 'ru'
 title = 'АИС определения объёма груза'
 theme = 'PaperMod'

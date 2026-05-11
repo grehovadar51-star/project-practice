@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>АИС определения объёма груза</title>
-    <link>/</link>
+    <link>https://grehovadar51-star.github.io/project-practice/</link>
     <description>Recent content on АИС определения объёма груза</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 04 May 2026 00:00:00 +0300</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://grehovadar51-star.github.io/project-practice/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Дообучение модели и подготовка MVP к сдаче</title>
-      <link>/journal/2026-05-04-retraining/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-05-04-retraining/</link>
       <pubDate>Mon, 04 May 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-05-04-retraining/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-05-04-retraining/</guid>
       <description>&lt;p&gt;Выполнено дообучение модели с учётом новых требований системы. Собран итоговый Docker-образ, готовый к развёртыванию одной командой. Реализован веб-интерфейс для загрузки фото и отображения результатов. Подготовлена архитектурная схема, инструкция для заказчика и видеопрезентация.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Тестирование нововведений</title>
-      <link>/journal/2026-04-20-testing/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-04-20-testing/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-04-20-testing/</guid>
       <description>&lt;p&gt;Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Реализация алгоритма расчёта объёма груза</title>
-      <link>/journal/2026-04-06-algorithm/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-04-06-algorithm/</link>
       <pubDate>Mon, 06 Apr 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-04-06-algorithm/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-04-06-algorithm/</guid>
       <description>&lt;p&gt;Завершена реализация основного алгоритма расчёта объёма. Система принимает изображение, выполняет детекцию, переводит размеры в метры и вычисляет объём. Результат возвращается в виде JSON. Начата работа над веб-интерфейсом и Docker-образом.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Калибровка камер и разработка модуля «пиксель → метры»</title>
-      <link>/journal/2026-03-23-calibration/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-03-23-calibration/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-03-23-calibration/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-03-23-calibration/</guid>
       <description>&lt;p&gt;Реализован модуль перевода пиксельных координат в метрические. Проведена калибровка камер с учётом перспективы. Точность оценки габаритов повышена. Начата проработка архитектуры API и контейнеризации.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Переработка функции определения объёма груза</title>
-      <link>/journal/2026-03-02-volume/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-03-02-volume/</link>
       <pubDate>Mon, 02 Mar 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-03-02-volume/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-03-02-volume/</guid>
       <description>&lt;p&gt;Переработана функция расчёта объёма груза на основе результатов детекции. Учтены краевые случаи: наложение объектов, нестандартная форма груза. Проведено сравнение точности с ручными замерами. Параллельно начата работа над экономическим обоснованием и анализом конкурентов.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Оценка качества детекции и анализ ошибок</title>
-      <link>/journal/2026-02-10-detection/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/journal/2026-02-10-detection/</link>
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0300</pubDate>
-      <guid>/journal/2026-02-10-detection/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/journal/2026-02-10-detection/</guid>
       <description>&lt;p&gt;Проведена первичная оценка качества детекции объектов на базе YOLOv8. Проанализированы типовые ошибки: пропуск объектов, ложные срабатывания, неточности bounding box. Определены направления улучшения модели. Начата подготовка датасета с разметкой в Roboflow.&lt;/p&gt;</description>
     </item>
     <item>
       <title>О проекте</title>
-      <link>/about/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/about/</guid>
       <description>&lt;h2 id=&#34;-цель-проекта&#34;&gt;🎯 Цель проекта&lt;/h2&gt;
 &lt;p&gt;Разработать автоматизированную систему определения объёма груза в заданной зоне склада с использованием нейросетевых технологий.&lt;/p&gt;
 &lt;h2 id=&#34;-проблематика&#34;&gt;❗ Проблематика&lt;/h2&gt;
@@ -114,9 +114,9 @@
     </item>
     <item>
       <title>Ресурсы</title>
-      <link>/resources/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/resources/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/resources/</guid>
       <description>&lt;h2 id=&#34;-полезные-материалы&#34;&gt;🔗 Полезные материалы&lt;/h2&gt;
 &lt;h3 id=&#34;-организация-партнёр&#34;&gt;🏢 Организация-партнёр&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.exist.ru/&#34;&gt;ООО «А+А ЭКСИСТ-ИНФО»&lt;/a&gt;&lt;/p&gt;
@@ -136,9 +136,9 @@
     </item>
     <item>
       <title>Участники</title>
-      <link>/team/</link>
+      <link>https://grehovadar51-star.github.io/project-practice/team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/team/</guid>
+      <guid>https://grehovadar51-star.github.io/project-practice/team/</guid>
       <description>&lt;h2 id=&#34;-команда-проекта&#34;&gt;👥 Команда проекта&lt;/h2&gt;
 &lt;h3 id=&#34;-команда-разработки-и-интеграции&#34;&gt;👨‍💻 Команда разработки и интеграции&lt;/h3&gt;
 &lt;ul&gt;
