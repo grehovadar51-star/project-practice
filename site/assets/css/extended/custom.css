@@ -1,0 +1,12 @@
+.post-content img,
+.entry-content img,
+main img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+svg {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}

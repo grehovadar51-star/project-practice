@@ -11,6 +11,7 @@ theme = 'PaperMod'
   ShowShareButtons = false
   ShowBreadCrumbs = true
   defaultContentLanguage = 'ru'
+  assets_config = 'assets/css/extended/custom.css'
 
   [params.homeInfoParams]
     Title = 'АИС определения объёма груза'
