@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/</loc>
+    <lastmod>2026-05-11T14:52:03+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-05-04-retraining/</loc>
+    <lastmod>2026-05-04T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-04-20-testing/</loc>
+    <lastmod>2026-04-20T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-04-06-algorithm/</loc>
+    <lastmod>2026-04-06T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-03-23-calibration/</loc>
+    <lastmod>2026-03-23T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-03-02-volume/</loc>
+    <lastmod>2026-03-02T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/journal/2026-02-10-detection/</loc>
+    <lastmod>2026-02-10T00:00:00+03:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/tags/</loc>
+  </url><url>
+    <loc>/about/</loc>
+  </url><url>
+    <loc>/resources/</loc>
+  </url><url>
+    <loc>/team/</loc>
+  </url>
+</urlset>
