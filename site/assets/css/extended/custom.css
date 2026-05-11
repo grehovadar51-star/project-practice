@@ -1,12 +1,22 @@
-.post-content img,
-.entry-content img,
-main img {
-    max-width: 100% !important;
-    height: auto !important;
-    width: auto !important;
+/* Убираем гигантские стрелки */
+.prev-post,
+.next-post,
+.top-link {
+    font-size: 1rem !important;
+}
+
+.prev-post a,
+.next-post a {
+    font-size: 1rem !important;
 }
 
 svg {
+    max-width: 24px !important;
+    max-height: 24px !important;
+}
+
+/* Фикс картинок */
+img {
     max-width: 100% !important;
-    max-height: 100% !important;
+    height: auto !important;
 }
