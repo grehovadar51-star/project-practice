@@ -46,4 +46,4 @@ title: "О проекте"
 
 ## 📅 План-график работ
 
-![Диаграмма Ганта](/images/schema.png)
+![Диаграмма Ганта](/project-practice/images/schema.png)
