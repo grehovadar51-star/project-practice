@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journals | АИС определения объёма груза</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        header { background: #1a5276; color: white; padding: 1rem 2rem; }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        nav { margin-top: 0.5rem; }
+        nav a { color: white; margin-right: 1rem; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        img { max-width: 100%; border-radius: 8px; }
+        footer { text-align: center; padding: 1rem; color: #666; }
+        .journal-entry { margin-bottom: 1.5rem; }
+        .journal-date { color: #e67e22; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { padding: 0.5rem; border: 1px solid #ddd; }
+        th { background: #1a5276; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📦 АИС для транспортной компании</h1>
+        <nav>
+            <a href="/project-practice/">Главная</a>
+            <a href="/project-practice/about/">О проекте</a>
+            <a href="/project-practice/team/">Участники</a>
+            <a href="/project-practice/journal/">Журнал</a>
+            <a href="/project-practice/resources/">Ресурсы</a>
+        </nav>
+    </header>
+    <main>
+        
+<div class="card">
+    <h2>Journals</h2>
+    
+    
+    <div class="journal-entry">
+        <p class="journal-date">11.05.2026</p>
+        <h3><a href="/project-practice/journal/2026-05-11-api/">Добавлен API и улучшен алгоритм</a></h3>
+        <p><p>Реализован программный интерфейс (API) для удобной передачи данных между системой определения объёма и информационными системами заказчика. Проведено дополнительное тестирование алгоритма, исправлены выявленные неточности. Точность детекции повышена до 94%.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">04.05.2026</p>
+        <h3><a href="/project-practice/journal/2026-05-04-retraining/">Дообучение модели и подготовка MVP к сдаче</a></h3>
+        <p><p>Выполнено дообучение модели с учётом новых требований системы. Собран итоговый Docker-образ, готовый к развёртыванию одной командой. Реализован веб-интерфейс для загрузки фото и отображения результатов. Подготовлена архитектурная схема, инструкция для заказчика и видеопрезентация.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">25.04.2026</p>
+        <h3><a href="/project-practice/journal/2026-04-25-algorithm/">Разработан и протестирован алгоритм расчёта объёма</a></h3>
+        <p><p>На основе модели YOLOv8 создан алгоритм, позволяющий определять объём груза в заданной зоне склада. Проведено первичное тестирование на тестовом датасете, предоставленном заказчиком. Алгоритм успешно детектирует объекты и рассчитывает их совокупный объём с точностью 89%.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">20.04.2026</p>
+        <h3><a href="/project-practice/journal/2026-04-20-testing/">Тестирование нововведений</a></h3>
+        <p><p>Проведено комплексное тестирование системы. Протестированы: API, пакетная обработка изображений, выгрузка отчётов в CSV. Выявлены и исправлены ошибки перспективных искажений. Экономисты финализировали отчёт по аналогам и требования к точности. Подготовлен Pitch Deck с расчётом ROI.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">06.04.2026</p>
+        <h3><a href="/project-practice/journal/2026-04-06-algorithm/">Реализация алгоритма расчёта объёма груза</a></h3>
+        <p><p>Завершена реализация основного алгоритма расчёта объёма. Система принимает изображение, выполняет детекцию, переводит размеры в метры и вычисляет объём. Результат возвращается в виде JSON. Начата работа над веб-интерфейсом и Docker-образом.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">23.03.2026</p>
+        <h3><a href="/project-practice/journal/2026-03-23-calibration/">Калибровка камер и разработка модуля «пиксель → метры»</a></h3>
+        <p><p>Реализован модуль перевода пиксельных координат в метрические. Проведена калибровка камер с учётом перспективы. Точность оценки габаритов повышена. Начата проработка архитектуры API и контейнеризации.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">02.03.2026</p>
+        <h3><a href="/project-practice/journal/2026-03-02-volume/">Переработка функции определения объёма груза</a></h3>
+        <p><p>Переработана функция расчёта объёма груза на основе результатов детекции. Учтены краевые случаи: наложение объектов, нестандартная форма груза. Проведено сравнение точности с ручными замерами. Параллельно начата работа над экономическим обоснованием и анализом конкурентов.</p></p>
+    </div>
+    
+    <div class="journal-entry">
+        <p class="journal-date">10.02.2026</p>
+        <h3><a href="/project-practice/journal/2026-02-10-detection/">Оценка качества детекции и анализ ошибок</a></h3>
+        <p><p>Проведена первичная оценка качества детекции объектов на базе YOLOv8. Проанализированы типовые ошибки: пропуск объектов, ложные срабатывания, неточности bounding box. Определены направления улучшения модели. Начата подготовка датасета с разметкой в Roboflow.</p></p>
+    </div>
+    
+</div>
+
+    </main>
+    <footer>
+        <p>© 2026 АИС определения объёма груза</p>
+    </footer>
+</body>
+</html>
