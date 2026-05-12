@@ -12,7 +12,7 @@
 
 ## Вариативная часть задания
 
-**Тема:** Создание Telegram-бота на Python с использованием библиотеки python-telegram-bot.
+**Тема:** Создание Telegram-бота на Python с использованием библиотеки pyTelegramBotAPI (telebot).
 
 Создание бота с командами /start, /help, /about, /echo, /joke, /weather, /survey. Изучение Telegram Bot API, асинхронного программирования, обработки сообщений.
 
