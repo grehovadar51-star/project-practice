@@ -14,6 +14,6 @@
 Итоги, полученные навыки.
 
 ## Список источников
-- Документация python-telegram-bot
+- Документация pyTelegramBotAPI (telebot)
 - Документация Hugo
 - GitHub Pages
