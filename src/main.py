@@ -1,60 +1,101 @@
 """
 Telegram-бот проекта АИС для транспортной компании
+Библиотека: pyTelegramBotAPI (telebot)
 """
 
-import logging
-from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+import telebot
+import random
 
-logging.basicConfig(format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO)
+TOKEN = "8708553740:AAEwiat-qhjSYlwXvYR0uFqYIMug8FIGInU"
 
-TOKEN = "ТВОЙ_ТОКЕН"
+bot = telebot.TeleBot(TOKEN)
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [[KeyboardButton("/help"), KeyboardButton("/about")]]
-    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-    await update.message.reply_text("👋 Привет! Я бот проекта АИС для транспортной компании.", reply_markup=reply_markup)
 
-async def help_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("/start /help /about /echo /joke /weather /survey")
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    """Приветствие с клавиатурой"""
+    keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+    keyboard.row("/help", "/about")
+    keyboard.row("/echo", "/joke")
+    keyboard.row("/weather", "/survey")
+    bot.reply_to(message, "👋 Привет! Я бот проекта АИС для транспортной компании.", reply_markup=keyboard)
 
-async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("АИС определения объёма груза на базе YOLOv8.")
 
-async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if context.args:
-        await update.message.reply_text(" ".join(context.args))
+@bot.message_handler(commands=['help'])
+def send_help(message):
+    """Справка по командам"""
+    text = (
+        "📋 *Доступные команды:*\n"
+        "/start — перезапуск\n"
+        "/help — справка\n"
+        "/about — о проекте\n"
+        "/echo \\<текст\\> — повтор текста\n"
+        "/joke — случайная шутка\n"
+        "/weather — погода (демо)\n"
+        "/survey — опрос"
+    )
+    bot.reply_to(message, text, parse_mode="Markdown")
 
-async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    import random
+
+@bot.message_handler(commands=['about'])
+def send_about(message):
+    """Информация о проекте"""
+    text = (
+        "🤖 *О проекте*\n\n"
+        "АИС для транспортной компании.\n"
+        "Автоматизация определения объёма груза в зоне склада с помощью YOLOv8."
+    )
+    bot.reply_to(message, text, parse_mode="Markdown")
+
+
+@bot.message_handler(commands=['echo'])
+def send_echo(message):
+    """Повтор текста пользователя"""
+    text = message.text.replace("/echo", "").strip()
+    if text:
+        bot.reply_to(message, f"🔊 {text}")
+    else:
+        bot.reply_to(message, "ℹ️ Использование: /echo ваш текст")
+
+
+@bot.message_handler(commands=['joke'])
+def send_joke(message):
+    """Случайная шутка"""
     jokes = [
         "Почему программисты путают Хэллоуин и Рождество? 31 OCT = 25 DEC!",
         "Багов не существует — есть недокументированные фичи.",
-        "Чтобы понять рекурсию, нужно сначала понять рекурсию."
+        "Чтобы понять рекурсию, нужно сначала понять рекурсию.",
+        "Программист ставит на тумбочку два стакана: с водой и пустой.",
     ]
-    await update.message.reply_text(random.choice(jokes))
+    bot.reply_to(message, f"😄 {random.choice(jokes)}")
 
-async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("🌤 Москва: +18°C, облачно (демо)")
 
-async def survey(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("📝 Опрос: Как вас зовут? (демо-режим)")
+@bot.message_handler(commands=['weather'])
+def send_weather(message):
+    """Демо-прогноз погоды"""
+    text = (
+        "🌤 *Прогноз погоды (демо)*\n\n"
+        "📍 Москва\n"
+        "🌡 +18°C\n"
+        "💨 Ветер: 3 м/с\n"
+        "☁️ Облачно с прояснениями"
+    )
+    bot.reply_to(message, text, parse_mode="Markdown")
 
-async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Используйте /help для списка команд.")
 
-def main():
-    app = Application.builder().token(TOKEN).build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("help", help_cmd))
-    app.add_handler(CommandHandler("about", about))
-    app.add_handler(CommandHandler("echo", echo))
-    app.add_handler(CommandHandler("joke", joke))
-    app.add_handler(CommandHandler("weather", weather))
-    app.add_handler(CommandHandler("survey", survey))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
-    print("Бот запущен!")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+@bot.message_handler(commands=['survey'])
+def send_survey(message):
+    """Демо-опрос"""
+    bot.reply_to(message, "📝 *Опрос* (демо-режим)\nКак вас зовут? Напишите в ответ.", parse_mode="Markdown")
+
+
+@bot.message_handler(func=lambda msg: True)
+def echo_all(message):
+    """Обработка всех текстовых сообщений"""
+    bot.reply_to(message, f"Вы написали: {message.text}\nИспользуйте /help для списка команд.")
+
 
 if __name__ == "__main__":
-    main()
+    print("Бот запущен!")
+    print("Перейдите в Telegram: https://t.me/transport_ais_bot")
+    bot.infinity_polling()
