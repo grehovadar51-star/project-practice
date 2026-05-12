@@ -10,6 +10,6 @@
 ## Вариативная часть
 **Тема:** Создание Telegram-бота на Python.
 
-**Стек:** Python 3, python-telegram-bot.
+**Стек:** Python 3, pyTelegramBotAPI (telebot).
 
 **Функционал:** /start, /help, /about, /echo, /joke, /weather, /survey.
