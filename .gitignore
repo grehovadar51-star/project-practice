@@ -1,0 +1,12 @@
+# Hugo
+site/public/
+
+# Временные файлы
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc

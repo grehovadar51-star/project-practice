@@ -1,8 +1,0 @@
-site/public/
-site/.hugo_build.lock
-*.log
-*.tmp
-.DS_Store
-Thumbs.db
-__pycache__/
-*.pyc

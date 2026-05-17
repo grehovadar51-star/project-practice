@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы — АИС Транспорт</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" style="line-height: 1; margin-top: 0; padding-top: 0;">
+                <span style="font-size: 24px; font-weight: 700; display: block; margin-bottom: -1px;">АИС</span>
+                <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; background: linear-gradient(135deg, #0d9488, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block;">для транспортной компании</span>
+            </a>
+            <nav class="menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="team.html">Участники</a>
+                <a href="journal.html">Журнал</a>
+                <a href="resources.html" class="active">Ресурсы</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ==================== ПОЛЕЗНЫЕ ССЫЛКИ ==================== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Ресурсы</h2>
+                <p>Полезные материалы и ссылки</p>
+            </div>
+
+            <!-- Список ссылок: каждая — отдельным блоком с описанием -->
+            <ul class="resource-list">
+                <li>
+                    <a href="https://t.me/transport_ais_bot" target="_blank">Telegram-бот АИС для транспортной компании</a>
+                    <small>Демонстрация возможностей системы: расчёт объёма, преимущества, ссылки</small>
+                </li>
+                <li>
+                    <a href="https://www.jde.ru" target="_blank">ООО «ЖелДорЭкспедиция»</a>
+                    <small>Официальный сайт организации-заказчика</small>
+                </li>
+                <li>
+                    <a href="https://github.com/grehovadar51-star/project-practice" target="_blank">GitHub-репозиторий</a>
+                    <small>Исходный код проекта и документация</small>
+                </li>
+                <li>
+                    <a href="https://docs.ultralytics.com" target="_blank">Документация YOLOv8</a>
+                    <small>Официальное руководство по моделям компьютерного зрения</small>
+                </li>
+                <li>
+                    <a href="https://pytorch.org" target="_blank">PyTorch</a>
+                    <small>Фреймворк глубокого обучения</small>
+                </li>
+                <li>
+                    <a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+                    <small>Документация фреймворка для создания API</small>
+                </li>
+                <li>
+                    <a href="https://www.docker.com" target="_blank">Docker</a>
+                    <small>Платформа контейнеризации приложений</small>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <p>2026 АИС для транспортной компании</p>
+    </footer>
+
+    <!-- Кнопка прокрутки наверх -->
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Наверх">↑</button>
+
+    <script>
+        const btn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+    </script>
+</body>
+</html>

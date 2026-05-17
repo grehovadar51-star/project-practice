@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте — АИС Транспорт</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="header-inner">
+            <!-- Logo: крупный "АИС" + градиентная подпись снизу -->
+            <a href="index.html" class="logo" style="line-height: 1; margin-top: 0; padding-top: 0;">
+                <span style="font-size: 24px; font-weight: 700; display: block; margin-bottom: -1px;">АИС</span>
+                <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; background: linear-gradient(135deg, #0d9488, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block;">для транспортной компании</span>
+            </a>
+            <!-- Main navigation -->
+            <nav class="menu">
+                <a href="index.html">Главная</a>
+                <a href="about.html" class="active">О проекте</a>
+                <a href="team.html">Участники</a>
+                <a href="journal.html">Журнал</a>
+                <a href="resources.html">Ресурсы</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ==================== ABOUT ==================== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>О проекте</h2>
+                <p>Автоматизированная информационная система для транспортной компании</p>
+            </div>
+            <p>АИС «Транспорт» — это программное решение для автоматического определения объёма груза на складе с помощью компьютерного зрения. Система разработана студентами Московского Политеха в рамках дисциплины «Проектная деятельность» по заказу ООО «ЖелДорЭкспедиция» — транспортного оператора сборных грузов в России.</p>
+            <p>Продукт использует нейросеть YOLOv8 для детекции объектов в реальном времени, что позволяет за 10 секунд определить габариты и объём груза с точностью более 95%. Готовое решение упаковано в Docker-образ и может быть развёрнуто на сервере заказчика одной командой. Система интегрируется с существующими WMS/TMS-платформами через API на FastAPI.</p>
+        </section>
+
+        <!-- ==================== PROBLEM ==================== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Проблема</h2>
+                <p>Что не так с текущим процессом оценки объёма груза</p>
+            </div>
+            <!-- Problem cards with gradient icons -->
+            <div class="card">
+                <h3>
+                    <span class="icon-gradient">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
+                    Медленная обработка
+                </h3>
+                <p>Ручное измерение одного груза занимает около 3 минут. Операторы тратят до 50% рабочего времени на рутину.</p>
+            </div>
+            <div class="card">
+                <h3>
+                    <span class="icon-gradient">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                    </span>
+                    Высокий процент ошибок
+                </h3>
+                <p>Замеры рулеткой дают расхождения в 10–20%, что приводит к штрафам и рекламациям.</p>
+            </div>
+            <div class="card">
+                <h3>
+                    <span class="icon-gradient">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                    </span>
+                    Потери объёма транспорта
+                </h3>
+                <p>Из-за неточного учёта кубатуры возникает до 15% недозагрузки фур.</p>
+            </div>
+        </section>
+
+        <!-- ==================== SOLUTION ==================== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Наше решение</h2>
+                <p>Что изменится после внедрения АИС</p>
+            </div>
+            <!-- Before → After → Result chain -->
+            <div class="chain">
+                <div class="chain-item bad">
+                    <div class="chain-label red">Было</div>
+                    <div class="chain-value red">3 мин</div>
+                    <div class="chain-desc">Ручной замер рулеткой, ошибки до 20%, недозагрузка транспорта.</div>
+                </div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-item good">
+                    <div class="chain-label green">Стало</div>
+                    <div class="chain-value green">10 сек</div>
+                    <div class="chain-desc">Автоматическая детекция YOLOv8, точность >95%, фото-фиксация.</div>
+                </div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-item result">
+                    <div class="chain-label blue">Итог</div>
+                    <div class="chain-value blue">21 ₽/груз</div>
+                    <div class="chain-desc">Чистый эффект, окупаемость < 3 мес., маржинальность 80,8%.</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== INTERFACE SCREENSHOT ==================== -->
+        <section id="interface" class="section">
+            <div class="section-header">
+                <h2>Интерфейс системы</h2>
+                <p>Загрузка фото и отображение результатов расчёта</p>
+            </div>
+            <img src="static/images/result.png" alt="Интерфейс системы" style="max-width: 70%; margin-top: 16px;">
+            <p style="color: var(--text-muted); font-size: 13px; font-style: italic; margin-top: 8px;">Пример работы веб-интерфейса: загрузка кадра, детекция груза, отображение объёма и статуса.</p>
+        </section>
+
+                <!-- ==================== TECH STACK ==================== -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Стек технологий</h2>
+                <p>Современные инструменты разработки</p>
+            </div>
+            <div class="tech-cards">
+                <div class="tech-card">
+                    <h4>Python</h4>
+                    <p>Основной язык разработки алгоритмов и API.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>YOLOv8</h4>
+                    <p>Нейросеть для детекции объектов на изображениях.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>FastAPI</h4>
+                    <p>Фреймворк для создания REST API.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>OpenCV</h4>
+                    <p>Библиотека для обработки изображений.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Docker</h4>
+                    <p>Контейнеризация для быстрого развёртывания.</p>
+                </div>
+                <div class="tech-card">
+                    <h4>HTML + CSS</h4>
+                    <p>Веб-интерфейс и статический сайт проекта.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ==================== ECONOMICS (anchor from main page KPIs) ==================== -->
+        <section class="section" id="economics">
+            <div class="section-header">
+                <h2>Экономическая эффективность</h2>
+                <p>Финансовые показатели проекта</p>
+            </div>
+            <table>
+                <tr>
+                    <th>Показатель</th>
+                    <th>Значение</th>
+                </tr>
+                <tr>
+                    <td>Чистый эффект на 1 груз</td>
+                    <td>21 ₽</td>
+                </tr>
+                <tr>
+                    <td>Маржинальность</td>
+                    <td>80,8%</td>
+                </tr>
+                <tr>
+                    <td>Окупаемость</td>
+                    <td>< 3 месяцев</td>
+                </tr>
+                <tr>
+                    <td>Годовая прибыль</td>
+                    <td>> 3,8 млн ₽</td>
+                </tr>
+                <tr>
+                    <td>Срок внедрения</td>
+                    <td>2–4 недели</td>
+                </tr>
+                <tr>
+                    <td>Затраты / груз</td>
+                    <td>~5 ₽</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <p>2026 АИС для транспортной компании</p>
+    </footer>
+
+    <!-- ==================== SCROLL-TO-TOP BUTTON ==================== -->
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Наверх">↑</button>
+
+    <script>
+        // Show/hide scroll-to-top button based on scroll position
+        const btn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+    </script>
+</body>
+</html>
