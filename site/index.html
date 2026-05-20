@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- ==================== HEADER ==================== -->
+    <!-- Шапка -->
     <header class="header">
         <div class="header-inner">
             <a href="index.html" class="logo" style="line-height: 1; margin-top: 0; padding-top: 0;">
@@ -25,15 +25,15 @@
         </div>
     </header>
 
-    <!-- ==================== ГЛАВНЫЙ ЭКРАН ==================== -->
+    <!-- Главный экран -->
     <section class="hero" style="position: relative; overflow: hidden; padding: 0;">
-        <!-- Фоновое фото груза: правые 50% экрана, плавное проявление слева направо -->
+        <!-- Фоновое фото груза -->
         <div style="position: absolute; right: 0; top: 0; width: 50%; height: 100%; z-index: 0; pointer-events: none; 
                     mask-image: linear-gradient(to right, transparent 0%, black 25%);
                     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);">
             <img src="static/images/cargo.png" alt="" style="width: 100%; height: 100%; object-fit: cover; border: none; box-shadow: none;">
         </div>
-        <!-- Текст и кнопки поверх фото -->
+        <!-- Текст и кнопки -->
         <div class="container" style="position: relative; z-index: 1; padding-top: 80px; padding-bottom: 60px;">
             <div class="hero-inner">
                 <div class="hero-text">
@@ -48,8 +48,7 @@
         </div>
     </section>
 
-    <!-- ==================== КЛЮЧЕВЫЕ ПОКАЗАТЕЛИ (KPI) ==================== -->
-    <!-- Нижние два блока — ссылки на экономический раздел страницы "О проекте" -->
+    <!-- KPI -->
     <div class="kpi-row">
         <div class="kpi-item">
             <div class="kpi-value">95%</div>
@@ -71,13 +70,12 @@
 
     <div class="container">
 
-        <!-- ==================== КАК ЭТО РАБОТАЕТ ==================== -->
+        <!-- Как это работает -->
         <section class="section">
             <div class="section-header">
                 <h2>Как это работает</h2>
                 <p>Три простых шага к автоматизации склада</p>
             </div>
-            <!-- Три шага в строку с разделителями -->
             <div class="steps">
                 <div class="step">
                     <div class="step-num">Шаг 1</div>
@@ -97,13 +95,12 @@
             </div>
         </section>
 
-        <!-- ==================== ВОЗМОЖНОСТИ СИСТЕМЫ ==================== -->
+        <!-- Возможности системы -->
         <section class="section">
             <div class="section-header">
                 <h2>Возможности системы</h2>
                 <p>Ключевые функции продукта</p>
             </div>
-            <!-- Таблица: функция + описание -->
             <table>
                 <tr><th>Функция</th><th>Описание</th></tr>
                 <tr><td>Детекция YOLOv8</td><td>Распознавание паллет и коробок с точностью 95%</td></tr>
@@ -116,16 +113,16 @@
         </section>
     </div>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Футэр -->
     <footer class="footer">
         <p>2026 АИС для транспортной компании</p>
     </footer>
 
-    <!-- Кнопка прокрутки наверх страницы -->
+    <!-- Кнопка наверх -->
     <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Наверх">↑</button>
 
     <script>
-        // Показывать кнопку "наверх" только после прокрутки > 400px
+        // Показать кнопку после прокрутки
         const btn = document.querySelector('.scroll-top');
         window.addEventListener('scroll', () => {
             btn.classList.toggle('visible', window.scrollY > 400);

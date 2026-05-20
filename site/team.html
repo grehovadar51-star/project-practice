@@ -6,7 +6,6 @@
     <title>Участники — АИС Транспорт</title>
     <link rel="stylesheet" href="static/css/style.css">
     <style>
-        /* ====== Стили таблиц участников ====== */
         .team-table {
             width: 100%;
             border-collapse: collapse;
@@ -33,18 +32,15 @@
             background: var(--bg);
         }
         
-        /* Подсветка строки при наведении — градиент от акцентного цвета */
         .team-table tr:hover td {
             background: linear-gradient(90deg, rgba(13,148,136,0.05) 0%, rgba(2,132,199,0.05) 100%);
         }
         
-        /* Градиенты шапок: цвет → белый, для каждой команды свой */
         .team-table-1 th { background: linear-gradient(90deg, #0d9488 0%, #ffffff 100%); color: #fff; }
         .team-table-2 th { background: linear-gradient(90deg, #0284c7 0%, #ffffff 100%); color: #fff; }
         .team-table-3 th { background: linear-gradient(90deg, #0f766e 0%, #ffffff 100%); color: #fff; }
         .team-table-4 th { background: linear-gradient(90deg, #0369a1 0%, #ffffff 100%); color: #fff; }
         
-        /* Заголовки секций с иконкой */
         .section-header-icon {
             display: flex;
             align-items: center;
@@ -60,7 +56,7 @@
 </head>
 <body>
 
-    <!-- ==================== HEADER ==================== -->
+    <!-- Шапка -->
     <header class="header">
         <div class="header-inner">
             <a href="index.html" class="logo" style="line-height: 1; margin-top: 0; padding-top: 0;">
@@ -84,7 +80,7 @@
                 <p>Команда разработки АИС для транспортной компании</p>
             </div>
 
-            <!-- ========== Команда разработки и интеграции ========== -->
+            <!-- Команда разработки и интеграции -->
             <div class="mt-32">
                 <h3 class="section-header-icon">
                     <span class="icon-gradient">
@@ -97,20 +93,20 @@
                 </h3>
             </div>
             <table class="team-table team-table-1">
-                <tr><th>ФИО</th><th>Группа</th></tr>
-                <tr><td>Алиханов Богдан Тагирович — тимлид</td><td>241-333</td></tr>
-                <tr><td>Бондаренко Кирилл Андреевич</td><td>241-131</td></tr>
-                <tr><td>Сулейманов Эмиль Шамилевич</td><td>241-132</td></tr>
-                <tr><td>Гильдеева Виктория Сергеевна</td><td>251-333</td></tr>
-                <tr><td>Грехова Дарья Кирилловна</td><td>251-334</td></tr>
-                <tr><td>Хоруженко Дмитрий Андреевич</td><td>251-337</td></tr>
-                <tr><td>Майкова Елизавета Анатольевна</td><td>251-334</td></tr>
-                <tr><td>Федоров Иван Сергеевич</td><td>251-333</td></tr>
-                <tr><td>Дубинкин Антон Владимирович</td><td>251-339</td></tr>
-                <tr><td>Коваль Александр Евгеньевич</td><td>251-331</td></tr>
+                <tr><th>ФИО</th><th>Группа</th><th>Роль</th></tr>
+                <tr><td>Алиханов Богдан Тагирович</td><td>241-333</td><td>Лидер проекта</td></tr>
+                <tr><td>Бондаренко Кирилл Андреевич</td><td>241-131</td><td>Подготовка и аннотация данных</td></tr>
+                <tr><td>Сулейманов Эмиль Шамилевич</td><td>241-132</td><td>Анализ аналогов и CV-моделей</td></tr>
+                <tr><td>Гильдеева Виктория Сергеевна</td><td>251-333</td><td>Тестирование</td></tr>
+                <tr><td>Грехова Дарья Кирилловна</td><td>251-334</td><td>Тестирование</td></tr>
+                <tr><td>Майкова Елизавета Анатольевна</td><td>251-334</td><td>REST API</td></tr>
+                <tr><td>Федоров Иван Сергеевич</td><td>251-333</td><td>Пакетная обработка данных</td></tr>
+                <tr><td>Дубинкин Антон Владимирович</td><td>251-339</td><td>Контейнеризация</td></tr>
+                <tr><td>Коваль Александр Евгеньевич</td><td>251-331</td><td>Подготовка отчётов</td></tr>
+                <tr><td>Останин Платон Валерьевич</td><td>251-336</td><td>Обработка нескольких паллет</td></tr>
             </table>
 
-            <!-- ========== Команда математики и алгоритмов ========== -->
+            <!-- Команда математики и алгоритмов -->
             <div class="mt-48">
                 <h3 class="section-header-icon">
                     <span class="icon-gradient">
@@ -124,13 +120,14 @@
                 </h3>
             </div>
             <table class="team-table team-table-2">
-                <tr><th>ФИО</th><th>Группа</th></tr>
-                <tr><td>Мокшин Кирилл Александрович</td><td>241-132</td></tr>
-                <tr><td>Пинчук Ренат Сергеевич</td><td>241-132</td></tr>
-                <tr><td>Хомидов Дилшоджон Шерзодович</td><td>251-337</td></tr>
+                <tr><th>ФИО</th><th>Группа</th><th>Роль</th></tr>
+                <tr><td>Мокшин Кирилл Александрович</td><td>241-132</td><td>Подготовка и аннотация данных</td></tr>
+                <tr><td>Пинчук Ренат Сергеевич</td><td>241-132</td><td>Подготовка и аннотация данных</td></tr>
+                <tr><td>Хомидов Дилшоджон Шерзодович</td><td>251-337</td><td>3D-проекция</td></tr>
+                <tr><td>Хоруженко Дмитрий Андреевич</td><td>251-337</td><td>3D-проекция</td></tr>
             </table>
 
-            <!-- ========== Команда экономики ========== -->
+            <!-- Команда экономики -->
             <div class="mt-48">
                 <h3 class="section-header-icon">
                     <span class="icon-gradient">
@@ -143,13 +140,13 @@
                 </h3>
             </div>
             <table class="team-table team-table-3">
-                <tr><th>ФИО</th><th>Группа</th></tr>
-                <tr><td>Островерхова Елена Олеговна</td><td>251-621</td></tr>
-                <tr><td>Полковникова Арина Александровна</td><td>251-621</td></tr>
-                <tr><td>Гыльцджанова Боссан</td><td>251-622</td></tr>
+                <tr><th>ФИО</th><th>Группа</th><th>Роль</th></tr>
+                <tr><td>Островерхова Елена Олеговна</td><td>251-621</td><td>Воронка конкурентов</td></tr>
+                <tr><td>Полковникова Арина Александровна</td><td>251-621</td><td>Воронка конкурентов</td></tr>
+                <tr><td>Гыльцджанова Боссан</td><td>251-622</td><td>Бизнес-презентация для заказчика</td></tr>
             </table>
 
-            <!-- ========== Команда аналитики ========== -->
+            <!-- Команда документации и медиа -->
             <div class="mt-48">
                 <h3 class="section-header-icon">
                     <span class="icon-gradient">
@@ -160,24 +157,23 @@
                             <rect x="2" y="20" width="20" height="2" rx="1"/>
                         </svg>
                     </span>
-                    Команда аналитики
+                    Команда аналитики и документации
                 </h3>
             </div>
             <table class="team-table team-table-4">
-                <tr><th>ФИО</th><th>Группа</th></tr>
-                <tr><td>Останин Платон Валерьевич</td><td>251-336</td></tr>
-                <tr><td>Леонтьев Александр Александрович</td><td>251-331</td></tr>
+                <tr><th>ФИО</th><th>Группа</th><th>Роль</th></tr>
+                <tr><td>Леонтьев Александр Александрович</td><td>251-331</td><td>Документирование проекта</td></tr>
             </table>
 
         </section>
     </div>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Футэр -->
     <footer class="footer">
         <p>2026 АИС для транспортной компании</p>
     </footer>
 
-    <!-- Кнопка прокрутки наверх -->
+    <!-- Кнопка наверх -->
     <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Наверх">↑</button>
 
     <script>

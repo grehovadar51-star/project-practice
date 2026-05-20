@@ -12,8 +12,7 @@ TOKEN = "8708553740:AAEwiat-qhjSYlwXvYR0uFqYIMug8FIGInU"
 bot = telebot.TeleBot(TOKEN)
 
 
-# ==================== Главное меню ====================
-
+# Главное меню
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -35,8 +34,7 @@ def send_welcome(message):
     bot.send_message(message.chat.id, text, reply_markup=keyboard, parse_mode="Markdown")
 
 
-# ==================== О проекте (с Inline-кнопками) ====================
-
+# О проекте
 @bot.message_handler(func=lambda msg: msg.text == "ℹ️ О проекте")
 def about_project(message):
     text = (
@@ -50,7 +48,6 @@ def about_project(message):
         "*Технологии:* PyTorch · YOLOv8 · FastAPI · Docker · OpenCV"
     )
     
-    # Inline-кнопки под сообщением
     inline = types.InlineKeyboardMarkup()
     inline.add(types.InlineKeyboardButton("🔬 Подробнее о технологиях", callback_data="tech"))
     inline.add(types.InlineKeyboardButton("📊 Экономика проекта", callback_data="econ"))
@@ -59,8 +56,7 @@ def about_project(message):
     bot.send_message(message.chat.id, text, reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Inline-кнопки: Технологии ====================
-
+# Inline: Технологии
 @bot.callback_query_handler(func=lambda call: call.data == "tech")
 def callback_tech(call):
     text = (
@@ -80,8 +76,7 @@ def callback_tech(call):
     bot.edit_message_text(text, call.message.chat.id, call.message.message_id, reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Inline-кнопки: Экономика ====================
-
+# Inline: Экономика
 @bot.callback_query_handler(func=lambda call: call.data == "econ")
 def callback_econ(call):
     text = (
@@ -102,8 +97,7 @@ def callback_econ(call):
     bot.edit_message_text(text, call.message.chat.id, call.message.id, reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Inline-кнопки: Назад ====================
-
+# Inline: Назад
 @bot.callback_query_handler(func=lambda call: call.data == "about_back")
 def callback_about_back(call):
     text = (
@@ -125,8 +119,7 @@ def callback_about_back(call):
     bot.edit_message_text(text, call.message.chat.id, call.message.id, reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Калькулятор ROI ====================
-
+# Калькулятор ROI
 @bot.message_handler(func=lambda msg: msg.text == "📊 Калькулятор ROI")
 def calculator_start(message):
     bot.send_message(
@@ -145,11 +138,10 @@ def calculator_result(message):
         if cargo_count <= 0:
             raise ValueError
         
-        # Расчёты
-        savings_per_cargo = 21  # руб/груз
+        savings_per_cargo = 21
         monthly_savings = cargo_count * savings_per_cargo
         yearly_savings = monthly_savings * 12
-        roi_months = 3  # месяца
+        roi_months = 3
         
         text = (
             "📊 *Результат расчёта*\n\n"
@@ -173,14 +165,14 @@ def calculator_result(message):
         bot.register_next_step_handler(message, calculator_result)
 
 
+# Калькулятор: пересчёт
 @bot.callback_query_handler(func=lambda call: call.data == "recalc")
 def callback_recalc(call):
     bot.send_message(call.message.chat.id, "Введите новое количество грузов в месяц:")
     bot.register_next_step_handler(call.message, calculator_result)
 
 
-# ==================== Пример работы ====================
-
+# Пример работы
 @bot.message_handler(func=lambda msg: msg.text == "📸 Пример работы")
 def example_work(message):
     caption = (
@@ -197,8 +189,7 @@ def example_work(message):
         bot.send_photo(message.chat.id, photo, caption=caption, parse_mode="Markdown")
 
 
-# ==================== Преимущества ====================
-
+# Преимущества
 @bot.message_handler(func=lambda msg: msg.text == "⭐ Преимущества")
 def advantages(message):
     text = (
@@ -223,8 +214,7 @@ def advantages(message):
     bot.send_message(message.chat.id, text, reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Ссылки ====================
-
+# Ссылки
 @bot.message_handler(func=lambda msg: msg.text == "🔗 Ссылки")
 def links(message):
     inline = types.InlineKeyboardMarkup()
@@ -234,15 +224,13 @@ def links(message):
     bot.send_message(message.chat.id, "🔗 *Полезные ссылки*", reply_markup=inline, parse_mode="Markdown")
 
 
-# ==================== Обработка текста ====================
-
+# Обработка текста
 @bot.message_handler(func=lambda msg: True)
 def handle_text(message):
     bot.send_message(message.chat.id, "Используйте кнопки меню или команду /start.")
 
 
-# ==================== Запуск ====================
-
+# Запуск
 if __name__ == "__main__":
     print("Бот запущен!")
     print("Перейдите в Telegram: https://t.me/transport_ais_bot")

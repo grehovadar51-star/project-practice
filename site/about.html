@@ -8,15 +8,13 @@
 </head>
 <body>
 
-    <!-- ==================== HEADER ==================== -->
+    <!-- Шапка -->
     <header class="header">
         <div class="header-inner">
-            <!-- Logo: крупный "АИС" + градиентная подпись снизу -->
             <a href="index.html" class="logo" style="line-height: 1; margin-top: 0; padding-top: 0;">
                 <span style="font-size: 24px; font-weight: 700; display: block; margin-bottom: -1px;">АИС</span>
                 <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; background: linear-gradient(135deg, #0d9488, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block;">для транспортной компании</span>
             </a>
-            <!-- Main navigation -->
             <nav class="menu">
                 <a href="index.html">Главная</a>
                 <a href="about.html" class="active">О проекте</a>
@@ -29,7 +27,7 @@
 
     <div class="container">
 
-        <!-- ==================== ABOUT ==================== -->
+        <!-- О проекте -->
         <section class="section">
             <div class="section-header">
                 <h2>О проекте</h2>
@@ -39,13 +37,12 @@
             <p>Продукт использует нейросеть YOLOv8 для детекции объектов в реальном времени, что позволяет за 10 секунд определить габариты и объём груза с точностью более 95%. Готовое решение упаковано в Docker-образ и может быть развёрнуто на сервере заказчика одной командой. Система интегрируется с существующими WMS/TMS-платформами через API на FastAPI.</p>
         </section>
 
-        <!-- ==================== PROBLEM ==================== -->
+        <!-- Проблема -->
         <section class="section">
             <div class="section-header">
                 <h2>Проблема</h2>
                 <p>Что не так с текущим процессом оценки объёма груза</p>
             </div>
-            <!-- Problem cards with gradient icons -->
             <div class="card">
                 <h3>
                     <span class="icon-gradient">
@@ -75,13 +72,12 @@
             </div>
         </section>
 
-        <!-- ==================== SOLUTION ==================== -->
+        <!-- Наше решение -->
         <section class="section">
             <div class="section-header">
                 <h2>Наше решение</h2>
                 <p>Что изменится после внедрения АИС</p>
             </div>
-            <!-- Before → After → Result chain -->
             <div class="chain">
                 <div class="chain-item bad">
                     <div class="chain-label red">Было</div>
@@ -103,7 +99,7 @@
             </div>
         </section>
         
-        <!-- ==================== INTERFACE SCREENSHOT ==================== -->
+        <!-- Интерфейс системы -->
         <section id="interface" class="section">
             <div class="section-header">
                 <h2>Интерфейс системы</h2>
@@ -113,7 +109,7 @@
             <p style="color: var(--text-muted); font-size: 13px; font-style: italic; margin-top: 8px;">Пример работы веб-интерфейса: загрузка кадра, детекция груза, отображение объёма и статуса.</p>
         </section>
 
-                <!-- ==================== TECH STACK ==================== -->
+        <!-- Стек технологий -->
         <section class="section">
             <div class="section-header">
                 <h2>Стек технологий</h2>
@@ -147,56 +143,34 @@
             </div>
         </section>
         
-        <!-- ==================== ECONOMICS (anchor from main page KPIs) ==================== -->
+        <!-- Экономическая эффективность -->
         <section class="section" id="economics">
             <div class="section-header">
                 <h2>Экономическая эффективность</h2>
                 <p>Финансовые показатели проекта</p>
             </div>
             <table>
-                <tr>
-                    <th>Показатель</th>
-                    <th>Значение</th>
-                </tr>
-                <tr>
-                    <td>Чистый эффект на 1 груз</td>
-                    <td>21 ₽</td>
-                </tr>
-                <tr>
-                    <td>Маржинальность</td>
-                    <td>80,8%</td>
-                </tr>
-                <tr>
-                    <td>Окупаемость</td>
-                    <td>< 3 месяцев</td>
-                </tr>
-                <tr>
-                    <td>Годовая прибыль</td>
-                    <td>> 3,8 млн ₽</td>
-                </tr>
-                <tr>
-                    <td>Срок внедрения</td>
-                    <td>2–4 недели</td>
-                </tr>
-                <tr>
-                    <td>Затраты / груз</td>
-                    <td>~5 ₽</td>
-                </tr>
+                <tr><th>Показатель</th><th>Значение</th></tr>
+                <tr><td>Чистый эффект на 1 груз</td><td>21 ₽</td></tr>
+                <tr><td>Маржинальность</td><td>80,8%</td></tr>
+                <tr><td>Окупаемость</td><td>< 3 месяцев</td></tr>
+                <tr><td>Годовая прибыль</td><td>> 3,8 млн ₽</td></tr>
+                <tr><td>Срок внедрения</td><td>2–4 недели</td></tr>
+                <tr><td>Затраты / груз</td><td>~5 ₽</td></tr>
             </table>
         </section>
 
     </div>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- Футэр -->
     <footer class="footer">
         <p>2026 АИС для транспортной компании</p>
     </footer>
 
-    <!-- ==================== SCROLL-TO-TOP BUTTON ==================== -->
+    <!-- Кнопка наверх -->
     <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Наверх">↑</button>
 
     <script>
-        // Show/hide scroll-to-top button based on scroll position
         const btn = document.querySelector('.scroll-top');
         window.addEventListener('scroll', () => {
             btn.classList.toggle('visible', window.scrollY > 400);
